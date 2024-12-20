@@ -15,7 +15,7 @@
 - [ ] I have read and followed the [Contributing Guidelines](https://github.com/Macro-Nest-Labs/portfolio/blob/develop/CONTRIBUTING.md).
 - [ ] New page route under `/app` has been added.
 - [ ] Any new env variables have been added to `.env-example` or `.env`.
-- [ ] `Growth Stats` builds successfully on `vercel`.
+- [ ] `Macro Nest Labs` builds successfully.
 
 ## Summary of changes (incl. QA instructions)
 
