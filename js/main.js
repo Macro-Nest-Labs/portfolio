@@ -97,5 +97,35 @@
         portfolioIsotope.isotope({filter: $(this).data('filter')});
     });
     
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+    
+            if (targetElement) {
+                const offset = 80;
+                const elementPosition = targetElement.offsetTop - offset;
+    
+                window.scrollTo({
+                    top: elementPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    window.addEventListener('scroll', () => {
+        const scrollPosition = window.pageYOffset + 100; // Offset to trigger highlighting before fully reaching the section
+
+        sections.forEach((section, index) => {
+            if (section && section.offsetTop <= scrollPosition && section.offsetTop + section.offsetHeight > scrollPosition) {
+                navLinks.forEach(link => link.classList.remove('active'));
+                navLinks[index].classList.add('active');
+            }
+        });
+    });
+
+    
 })(jQuery);
 
