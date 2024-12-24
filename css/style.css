@@ -343,6 +343,10 @@
 }
 
 /*** Project Portfolio ***/
+#our-projects {
+  min-height: 653px;
+}
+
 #portfolio-flters li {
   display: inline-block;
   font-weight: 500;
